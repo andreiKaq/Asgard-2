@@ -77,22 +77,20 @@ for (int i = 0; i <= 100; i++)
 //134234
 // ==> false
 
-
+/*
 Console.WriteLine("Салам Алейкум брат. Введи число и мы проверим за тебя является ли оно полиндромом xD ");
 
-string num = Console.ReadLine();
-
-string[] values = new string[] { num };
-
-int length = num.Length;
-int length2 = num.Length;
+string value = Console.ReadLine();
 
 
-string first = values[0].Substring(0, length / 2);
-string second = values[0].Substring(length / 2, values[0].Length + 1);
+int length = value.Length;
 
 
-/*
+string first = value.Substring(0, length / 2);
+string second = value.Substring(length / 2);
+
+
+
 string originalString = second;
 string reverseSecond = string.Empty;
 for (int i = originalString.Length - 1; i >= 0; i--)
@@ -103,15 +101,54 @@ for (int i = originalString.Length - 1; i >= 0; i--)
 
 if (Convert.ToInt32(first) == Convert.ToInt32(reverseSecond))
 {
-    Console.WriteLine("Ваше число ");
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine("Ваше число полиндромом");
+    Console.ForegroundColor = ConsoleColor.White;
+}
+else
+{
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("Ваше число не полиндром");
+    Console.ForegroundColor = ConsoleColor.White;
 }
 */
 
-Console.WriteLine(first);
-Console.WriteLine(second);
+while (true)
+{
+    Console.WriteLine("Салам Алейкум брат. Введи число и мы проверим за тебя является ли оно полиндромом xD ");
+
+    string value = Console.ReadLine();
+
+
+    int length = value.Length;
+
+
+    string first = value.Substring(0, length / 2);
+    string second = value.Substring(length / 2);
 
 
 
+    string originalString = second;
+    string reverseSecond = string.Empty;
+    for (int i = originalString.Length - 1; i >= 0; i--)
+    {
+        reverseSecond += originalString[i];
+    }
+
+
+    if (Convert.ToInt32(first) == Convert.ToInt32(reverseSecond))
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("Ваше число полиндромом");
+        Console.ForegroundColor = ConsoleColor.White;
+    }
+    else
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Ваше число не полиндром");
+        Console.ForegroundColor = ConsoleColor.White;
+    }
+}
 
 
 
