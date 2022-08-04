@@ -45,6 +45,7 @@ using System.Threading.Tasks;
 
 // - TASK [2]
 // Реализовать сравнение двух введенных с клавиатуры чисел. После сравнения, программа не должна закрываться, а должна ожидать ввод следующих цифр для сравнения
+/*
 Console.WriteLine("Ну привет! Введи 2 числа");
 
 for (int i = 0; i <= 100; i++)
@@ -67,14 +68,47 @@ for (int i = 0; i <= 100; i++)
         }
     }
 }
+*/
+
+//Реализовать алгоритм, который определяет является ли введенное целочисленное число полиндромом (читается одинаково слева направо и справа налево, для преобразования к типу int использовать Convert.ToInt32())
+// ==> 123 321
+// ==> ture
+//
+//134234
+// ==> false
 
 
+Console.WriteLine("Салам Алейкум брат. Введи число и мы проверим за тебя является ли оно полиндромом xD ");
+
+string num = Console.ReadLine();
+
+string[] values = new string[] { num };
+
+int length = num.Length;
+int length2 = num.Length;
 
 
+string first = values[0].Substring(0, length / 2);
+string second = values[0].Substring(length / 2, values[0].Length + 1);
 
 
+/*
+string originalString = second;
+string reverseSecond = string.Empty;
+for (int i = originalString.Length - 1; i >= 0; i--)
+{
+    reverseSecond += originalString[i];
+}
 
 
+if (Convert.ToInt32(first) == Convert.ToInt32(reverseSecond))
+{
+    Console.WriteLine("Ваше число ");
+}
+*/
+
+Console.WriteLine(first);
+Console.WriteLine(second);
 
 
 
