@@ -6,34 +6,64 @@
 
 
 
-/*
-int input = Convert.ToInt32(Console.ReadLine());
+
+ int input = Convert.ToInt32(Console.ReadLine());
 
 int[] array = new int[input];
-*/
 
+
+//int[] array = { 55, 77, 95, 23, 12, 44, 86, 34, 9, 73 };
 
 // [TASK - 2]
 /*
 - Массив необходимо заполнить произвольными целыми числами (для генерации чисел нужно использовать     Random rand = new Random();
 int value = rand.Next(-100, 100);). Сгенерированный массив необходимо вывести на экран
+
+// TASK2-1*
+NB!
+* Выполнить сортировку элементов массива по убыванию и вывести результат на экран,
+  без использования методов класса Array.
+
+[55, 77, 95, 23, 12, 44, 86, 34, 9, 73]
+
 */
 
 
 
 
-/*
 for (int i = 0; i < array.Length - 1; i++)
 {
     Random rand = new Random();
     int value = rand.Next(-100, 100);
 
     array[i] = value;
+
 }
 
-Console.WriteLine("[{0}]", string.Join(", ", array));
-*/
 
+
+
+int verify = 0;
+
+for (int i = 0; i < array.Length; i++)
+{
+    for (int j = 0; j < array.Length - 1; j++)
+    {
+        if (array[j] < array[j + 1])
+        {
+            verify = array[j + 1];
+            array[j + 1] = array[j];
+            array[j] = verify;
+        }
+    }
+
+
+}
+
+
+
+
+Console.WriteLine("[{0}]", string.Join(", ", array));
 
 
 // [TASK - 3]
@@ -42,7 +72,6 @@ Console.WriteLine("[{0}]", string.Join(", ", array));
  наименьшее значение в массиве, общую сумму всех элементов, среднее арифметическое всех элементов.
  Вычисленные значения необходимо вывести на экран
 - Программа должна ожидать нажатия клавиши клавиатуры для завершения работы программы.
-*/
 
 
 /*
@@ -68,6 +97,11 @@ Console.ReadLine();
 
 
 
+
+
+
+
+
 //[TASK - 4]
 /*
 - Создать программу-переводчик, которая знает 10 английских слов.
@@ -76,7 +110,7 @@ Console.ReadLine();
 Для решения задачи можно использовать класс Dictionary<string, string> и методы этого класса, такие как ContainsKey()....
 */
 
-
+/*
 Dictionary<string, string> vocabulary = new Dictionary<string, string>(){
     {"Car", "Машина"},
     {"Person", "Человек"},
@@ -111,13 +145,16 @@ while (true)
     else Console.WriteLine("Слово не было найдено");
 
 }
-
-/*
-Console.WriteLine(vocabulary);
-Console.ReadLine();
 */
 
 
+// TASK2-1*
+/*
+NB!
+* Выполнить сортировку элементов массива по убыванию и вывести результат на экран,
+  без использования методов класса Array.
+
+*/
 
 
 
